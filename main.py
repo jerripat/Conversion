@@ -20,14 +20,23 @@ dataFrame = Frame ( tk )
 lblOne = (Label ( dataFrame, text = "Lets collect some Data!!", width = "400", height = "350", font = ("Arial", 16),
                   bg = formBgColor ))
 
+# First frame
+frame_one = Frame(tk, width=200, height=200,bd=5, bg=formBgColor)
+#frame_one.place(relx=0.5,rely=0.5,anchor=CENTER)
+frame_one_label = Label(frame_one, text="Enter your weight", font=("Arial",12),bg='white',fg='black')
+#frame_one_label.place(relx=0.5,rely=0.25,anchor=CENTER)
+
 
 def fakeCommand():
+
     pass
 
 
 def hide():
    pass
 
+def show():
+    pass
 
 def getUser(userId):
     wht = 0
@@ -84,6 +93,7 @@ tk.config ( menu = my_menu )
 
 # Create menu items
 file_menu = Menu ( my_menu, tearoff = 0 )
+
 my_menu.add_cascade ( label = "File", menu =file_menu)
 file_menu.add_command ( label = "New", command = fakeCommand )
 file_menu.add_command ( label = "Exit", command = tk.quit )
@@ -93,6 +103,7 @@ edit_menu = Menu ( my_menu, tearoff = 0 )
 my_menu.add_cascade ( label = "Edit", menu =edit_menu)
 edit_menu.add_command ( label = "Cut", command = fakeCommand )
 edit_menu.add_command ( label = "Exit", command = tk.quit )
+
 
 
 btnStart = Button ( tk, text = "Start", command = start, width = 5, height = 1, font = ("Arial", 11) )
